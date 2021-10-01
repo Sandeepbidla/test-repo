@@ -1,0 +1,122 @@
+
+@mixin head_h2 {
+    margin: 0;
+    color: $blue-color;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 2px;    
+}
+@mixin h2_after {
+    content: "\25BE";
+    color: $blue-color;
+    font-size: 23px;
+    position: absolute;
+    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+    -moz-transform: translateY(-15%);
+} 
+
+@mixin head_h3 {
+    color: $blue-color;
+    font-size: 21px;
+    margin: 0;  
+}
+
+@mixin para {
+    color: #3d3d3d;
+    font-size: 14px;
+    margin: 0;
+}
+
+@mixin image_s {
+    border: 1px solid #ccc;
+    height: auto;
+    transition: transform .5s ease;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@mixin foot_h2{
+    margin: 0;
+        padding-bottom: 10px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 800;
+}
+
+@mixin foot_p{
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 16px;
+    color: $black-color
+}
+
+@mixin list {
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 0 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+@mixin shadow_f {
+    -webkit-box-shadow: 0px 3px 2px #8e8371;
+    -moz-box-shadow: 0px 3px 2px #8e8371;
+    box-shadow: 0px 3px 2px #8e8371;
+}
+
+@mixin foot_h3 {
+    margin: 0 0 20px;
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    color: $text-white;
+    font-weight: 400;
+    
+}
+
+@mixin btn_f {
+        border: 0;
+        margin: 0 0 20px;
+        background-color: $text-white;
+        border-radius: 4px;
+        padding: 5px 27px 5px 13px;
+        text-transform: uppercase;
+        color: $foot-btn-color;
+        box-shadow: 0px 2px 2px #c57c04;
+        position: relative;
+        cursor: pointer;
+}
+
+@mixin foot_h4 {
+       margin: 0 0 10px;
+    font-weight: 400;
+    color: $gray-color-foot;
+    font-size: 22px;
+    line-height: 30px;
+    
+}
+
+
+// Shaduled a talk Button
+%shaduled_btn {
+        border: 0;
+        margin: 0 0 20px;
+        background-color: $text-white;
+        border-radius: 2px;
+        padding: 5px 27px 5px 13px;
+        text-transform: uppercase;
+        color: $foot-btn-color;
+        box-shadow: 0px 2px 2px #c57c04;
+        position: relative;
+        cursor: pointer;
+  
+    &:hover {  color: $blue-color;}
+    
+    &::after{
+        content: ' \203A';
+        font-size: 30px;
+        line-height: 18px;
+        right: 10px;
+        position: absolute;
+    }
+  }

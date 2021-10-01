@@ -1,0 +1,169 @@
+@import "variable";
+@import "mixin";
+@import "media_query";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none !important;
+}
+
+@font-face {
+    font-family: DinRegular;
+    src: url(../fonts/D-DIN.woff);
+}
+
+body{
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: DinRegular;
+    margin: 0;
+    padding: 0;
+
+    @include scrollbars;
+ 
+}
+
+.head_cls_top{
+    padding: 30px 0px !important;
+}
+
+// NavLinks
+.navbar-light .navbar-nav .active>.nav-link{
+    color: $menu-color;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: $black-color;
+    transition: 0.5s ease;
+    font-family: DinRegular;
+
+    &:hover{
+        color: $menu-color;
+    }
+    .navbar-toggler {
+        color: $menu-color;
+        border: 0px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+    .text_f {
+        font-size: 30px;
+       font-weight: 600;
+       margin: 0;
+       padding: 0;
+    
+}
+
+.proj_w h2 {
+   @include head_h2;
+
+   &::after{
+    @include h2_after;
+   }
+}
+
+.proj_b {
+    margin-bottom: 10px;
+        h3{
+            @include head_h3;
+        }
+
+        p{
+            @include para;
+        }
+}
+
+.proj_b img{
+    @include image_s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1) !important;
+    }
+}
+
+
+.footer_cls{
+    background-color: $gray-color;
+    padding: 40px 0 0px;
+
+    h2 {
+        @include foot_h2;
+    }
+    p {
+            @include foot_p;
+        }
+}
+
+.flick_wrap{
+    display: none ;
+}
+.small_one{
+    display: none;
+}
+
+.list_f{
+    list-style: initial ;
+
+        li{
+        @include list;
+
+        .list_f_span {
+            color: #f6950b;
+        }
+
+    }
+}
+
+
+.get_in {
+    background-image: linear-gradient(to top , #f18c11, #ffa103);
+    padding: 25px;
+    text-align: center;
+    margin-top: -60px;
+
+    @include shadow_f;
+
+            @include mobile {
+                margin-top: 0px !important;
+            }
+
+    h3 {
+        @include foot_h3;
+    }
+
+     button {
+        // @include btn_f;
+        @extend %shaduled_btn;
+    }
+  
+}
+
+ h4{
+   @include foot_h4;
+}
+
+
+.img-fluid {
+    max-width: 100% !important;
+    height: auto !important ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
