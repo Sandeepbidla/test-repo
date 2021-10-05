@@ -1,0 +1,30 @@
+@mixin h2_after {  
+    transform: translateY(-15%);
+    -webkit-transform: translateY(-15%);
+    -moz-transform: translateY(-15%);
+}
+@mixin shadow_f {
+    -webkit-box-shadow: 0px 3px 2px #8e8371;
+    -moz-box-shadow: 0px 3px 2px #8e8371;
+    box-shadow: 0px 3px 2px #8e8371;
+}
+
+@mixin transition_t {
+    transition: transform .5s ease;
+    transition: 0.5s ease;
+}
+
+// Shaduled a talk Button
+%shaduled_btn {
+        box-shadow: 0px 2px 2px #c57c04;
+
+    &:hover {  color: $blue-color;}
+    
+    &::after{
+        content: ' \203A';
+        font-size: 30px;
+        line-height: 18px;
+        right: 10px;
+        position: absolute;
+    }
+  }

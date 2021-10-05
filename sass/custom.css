@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: DinRegular;
+    src: url(../fonts/D-DIN.woff);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: DinRegular;
+}
+
+header{
+    padding: 30px 0px;
+}
+
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: #ff5103 !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #000 !important;
+    transition: 0.5s ease;
+    font-family: DinRegular;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ff5103 !important;
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .9rem !important;
+    padding-left: .9rem !important;
+}
+}
+
+/* --Round Circle-- */
