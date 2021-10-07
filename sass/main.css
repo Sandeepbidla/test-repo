@@ -1,15 +1,5 @@
 .get_in button {
-  border: 0;
-  margin: 0 0 20px;
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 5px 27px 5px 13px;
-  text-transform: uppercase;
-  color: #f6950b;
-  -webkit-box-shadow: 0px 2px 2px #c57c04;
-  box-shadow: 0px 2px 2px #c57c04;
-  position: relative;
-  cursor: pointer;
+  border-radius: 3px !important;
 }
 
 .get_in button:hover {
@@ -46,26 +36,8 @@ body {
   padding: 0;
 }
 
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: pink;
-}
-
-body::-webkit-scrollbar-track {
-  background: red;
-}
-
-body {
-  scrollbar-face-color: pink;
-  scrollbar-track-color: red;
-}
-
-header {
-  padding: 30px 0px;
+.head_cls_top {
+  padding: 30px 0px !important;
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
@@ -74,6 +46,10 @@ header {
 
 .navbar-light .navbar-nav .nav-link {
   color: #000;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   font-family: DinRegular;
@@ -134,12 +110,14 @@ header {
 .proj_b img {
   border: 1px solid #ccc;
   height: auto;
+  max-width: 100%;
+  overflow: hidden;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
   transition: transform .5s ease, -webkit-transform .5s ease;
-  max-width: 100%;
-  overflow: hidden;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .proj_b img:hover {
@@ -168,12 +146,77 @@ header {
   color: #000;
 }
 
+@media screen and (max-width: 600px) {
+  .footer_cls {
+    background-color: #000 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flick_in {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .foot_2 {
+    display: none;
+  }
+}
+
 .flick_wrap {
   display: none;
 }
 
+@media screen and (max-width: 600px) {
+  .flick_wrap {
+    display: block !important;
+  }
+  .flick_wrap h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    color: #fff;
+  }
+  .flick_wrap h2::after {
+    content: ' \203A';
+    font-size: 30px;
+    line-height: 8px;
+    margin-left: 10px;
+    position: absolute;
+  }
+  .flick_wrap h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    color: #fff;
+    display: inline-block;
+  }
+  .flick_wrap ul {
+    list-style: none;
+  }
+  .flick_wrap ul li a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
 .small_one {
   display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .small_one {
+    display: block !important;
+  }
 }
 
 .list_f {
@@ -198,14 +241,9 @@ header {
   padding: 25px;
   text-align: center;
   margin-top: -60px;
+  margin-bottom: 25px;
   -webkit-box-shadow: 0px 3px 2px #8e8371;
   box-shadow: 0px 3px 2px #8e8371;
-}
-
-@media screen and (max-width: 600px) {
-  .get_in {
-    margin-top: 0px !important;
-  }
 }
 
 .get_in h3 {
@@ -216,11 +254,56 @@ header {
   font-weight: 400;
 }
 
+.get_in button {
+  border: 0;
+  margin: 0 0 20px;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 5px 27px 5px 13px;
+  text-transform: uppercase;
+  color: #f6950b;
+  position: relative;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .get_in .get_in {
+    margin-top: -50px !important;
+    margin-bottom: 25px;
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .foot_2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .foot_1 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
 h4 {
   margin: 0 0 10px;
   font-weight: 400;
   color: #3d3d3d;
   font-size: 22px;
   line-height: 30px;
+}
+
+.img-fluid {
+  max-width: 100% !important;
+  height: auto !important;
 }
 /*# sourceMappingURL=main.css.map */
