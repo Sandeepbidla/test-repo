@@ -58,26 +58,42 @@ body{
 }
 
 .proj_w h2 {
-   @include head_h2;
+    margin: 0;
+    color: $blue-color;
+    text-transform: uppercase;
+    font-size: 19px;
+    letter-spacing: 2px; 
 
    &::after{
-    @include h2_after;
+    content: "\25BE";
+    color: $blue-color;
+    font-size: 23px;
+    position: absolute;
+    @include translate_c;
    }
 }
 
 .proj_b {
     margin-bottom: 10px;
         h3{
-            @include head_h3;
+            color: $blue-color;
+            font-size: 21px;
+            margin: 0; 
         }
 
         p{
-            @include para;
+            color: #3d3d3d;
+    font-size: 14px;
+    margin: 0;
         }
 }
 
 .proj_b img{
-    @include image_s;
+    border: 1px solid #ccc;
+    height: auto;
+    transition: transform .5s ease;
+    max-width: 100%;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
@@ -91,10 +107,17 @@ body{
     padding: 40px 0 0px;
 
     h2 {
-        @include foot_h2;
+        margin: 0;
+        padding-bottom: 10px;
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: 800;
     }
     p {
-            @include foot_p;
+        margin: 0;
+        padding-bottom: 10px;
+        font-size: 16px;
+        color: $black-color
         }
 }
 
@@ -175,10 +198,8 @@ body{
 }
 
 .list_f{
-    list-style: initial ;
-
+    list-style: initial;
         li{
-        @include list;
             display: inline-block;
             letter-spacing: 1px;
             padding: 0 5px;
@@ -201,7 +222,6 @@ body{
     @include shadow_f;
 
     h3 {
-        @include foot_h3;
         margin: 0 0 20px;
         border-bottom: 1px solid #fff;
         display: inline-block;
@@ -241,7 +261,6 @@ body{
 }
 
  h4{
-   @include foot_h4;
     margin: 0 0 10px;
     font-weight: 400;
     color: $gray-color-foot;
