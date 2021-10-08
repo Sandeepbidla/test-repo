@@ -1,26 +1,11 @@
 @import "variable";
 @import "mixin";
 @import "media_query";
+@import "reset";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-*:focus {
-    outline: none !important;
-}
+@function weight($weight-name){
+     @return map-get($font-weights, $weight-name )
 
-@font-face {
-    font-family: DinRegular;
-    src: url(../fonts/D-DIN.woff);
-}
-
-body{
-    // font-family: Arial, Helvetica, sans-serif;
-    font-family: DinRegular;
-    margin: 0;
-    padding: 0; 
 }
 
 .head_cls_top{
@@ -51,10 +36,9 @@ body{
         font-size: 30px;
 .text_f {
        font-size: 30px;
-       font-weight: 600;
+       font-weight: weight(bold);
        margin: 0;
        padding: 0;
-    
 }
 
 .proj_w h2 {
@@ -111,7 +95,7 @@ body{
         padding-bottom: 10px;
         font-size: 13px;
         text-transform: uppercase;
-        font-weight: 800;
+        font-weight: weight(bolder);
     }
     p {
         margin: 0;
@@ -152,7 +136,7 @@ body{
         padding-bottom: 10px;
         font-size: 14px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: weight(bold);
         text-align: center;
         position: relative;
         color: $text-white;
@@ -171,7 +155,7 @@ body{
         padding-bottom: 10px;
         font-size: 11px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: weight(bold);
         position: relative;
         color: $text-white;
         display: inline-block;
@@ -184,7 +168,7 @@ body{
     .flick_wrap ul li a {
         color: $text-white;
         font-size: 12px;
-        font-weight: 500;
+        font-weight: weight(medium);
     }
 }
 
@@ -203,7 +187,7 @@ body{
             display: inline-block;
             letter-spacing: 1px;
             padding: 0 5px;
-            font-weight: 600;
+            font-weight: weight(bold);
             font-size: 15px;
         .list_f_span {
             color: #f6950b;
@@ -226,11 +210,10 @@ body{
         border-bottom: 1px solid #fff;
         display: inline-block;
         color: $text-white;
-        font-weight: 400;
+        font-weight: weight(regular);
     }
 
      button {
-        // @include btn_f;
         @extend %shaduled_btn;
     }
 
@@ -242,11 +225,7 @@ body{
             box-shadow: none !important;
       }
     }
-
-  
 }
-
-
 
 @include mobile {
     .foot_2{
@@ -262,12 +241,11 @@ body{
 
  h4{
     margin: 0 0 10px;
-    font-weight: 400;
+    font-weight: weight(regular);
     color: $gray-color-foot;
     font-size: 22px;
     line-height: 30px;
 }
-
 
 .img-fluid {
     max-width: 100% !important;
