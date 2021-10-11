@@ -5,7 +5,6 @@
 
 @function weight($weight-name){
      @return map-get($font-weights, $weight-name )
-
 }
 
 .head_cls_top{
@@ -14,30 +13,27 @@
 
 // NavLinks
 .navbar-light {
-    
-    .navbar-nav .active>.nav-link{
-        color: $menu-color;
+
+    .nav-link{
+        color: $black-color;
+        transition: 0.5s ease;
+        font-family: DinRegular;
     }
-
-} 
-.navbar-light > .nav-link {
-    color: $black-color;
-    transition: 0.5s ease;
-    font-family: DinRegular;
-
+    
     &:hover{
         color: $menu-color;
     }
-    .navbar-toggler {
-        color: $menu-color;
-        border: 0px;
-        margin: 0;
-        padding: 0;
-    }
+    
+} 
+
+.navbar-toggler {
+    color: $menu-color;
+    border: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-    .text_f {
-        font-size: 30px;
+
 .text_f {
        font-size: 30px;
        font-weight: weight(bold);
@@ -88,7 +84,6 @@
         transform: scale(1.1) !important;
     }
 }
-
 
 .footer_cls{
     background-color: $gray-color;
@@ -274,16 +269,4 @@
         position: absolute;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
